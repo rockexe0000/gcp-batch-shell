@@ -1,0 +1,47 @@
+{
+    "taskGroups": [
+      {
+        "taskSpec": {
+          "runnables": [
+            {
+              "container": {
+                "imageUri": "asia-east1-docker.pkg.dev/sy-living-dev/livinglife-image-repo/job-quickstart",
+                "entrypoint": "/bin/sh",
+                "commands": [
+                    "-c",
+                    "./script.sh"
+                ]
+              },
+              "environment": {
+                "variables": {
+                  "SLEEP_MS": "10000",
+                  "FAIL_RATE": "0.3"
+                }
+              }
+            }
+          ],
+          "computeResource": {
+              "cpuMilli": 1000,
+              "memoryMib": 975
+          },
+          "maxRetryCount": 3,
+          "maxRunDuration": "600s"
+        },
+        "taskCount": 3,
+        "parallelism": 3
+      }
+    ],
+    "logsPolicy": {
+      "destination": "CLOUD_LOGGING"
+    },
+    "allocationPolicy": {
+        "serviceAccount": {
+            "email": "db-backup@sy-living-dev.iam.gserviceaccount.com"
+        },
+        "instances": [
+            {
+                "policy": { "machineType": "e2-highcpu-2" }
+            }
+        ]
+    }
+  }
