@@ -3,14 +3,22 @@
 
 
 
+
+
+
 > ref: https://github.com/GoogleCloudPlatform/batch-samples/tree/main/busybox
 
 
 
+### `User` permissions
 
+  - `Batch Job Editor`
+    - RoleID: roles/batch.jobsEditor
+  - `Service Account User`
+    - RoleID: roles/iam.serviceAccountUser
+    - Description: 賦予 GCP batch 指定的 `Service Account` 
 
-
-### Service Account permissions
+### `Service Account` permissions
 
   - `Batch Agent Reporter`
     - RoleID: roles/batch.agentReporter

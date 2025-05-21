@@ -5,7 +5,7 @@
           "runnables": [
             {
               "container": {
-                "imageUri": "asia-east1-docker.pkg.dev/sy-living-dev/livinglife-image-repo/job-quickstart",
+                "imageUri": "${IMAGE_URL}",
                 "entrypoint": "/bin/sh",
                 "commands": [
                     "-c",
@@ -36,7 +36,7 @@
     },
     "allocationPolicy": {
         "serviceAccount": {
-            "email": "db-backup@sy-living-dev.iam.gserviceaccount.com"
+            "email": "${SERVICE_ACCOUNT}"
         },
         "instances": [
             {
