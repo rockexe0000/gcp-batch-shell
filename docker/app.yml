@@ -1,0 +1,62 @@
+version: '3.5'
+services:
+
+
+  gcp-batch-shell:
+    build:
+      context: ..
+      dockerfile: ./Dockerfile
+      args:
+        ENV: "dev"
+    platform: linux/amd64
+    image: gcp-batch-shell:latest
+    container_name: gcp-batch-shell
+    restart: "no"
+    
+    #command: ["tail","-f","/dev/null"]
+    
+    command: ["./script/sample.sh"]
+
+
+    #volumes:
+    #  - './data:/root/data:Z'
+
+    environment:
+      - ENV=dev
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

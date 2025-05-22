@@ -9,7 +9,7 @@
                 "entrypoint": "/bin/sh",
                 "commands": [
                     "-c",
-                    "./script.sh"
+                    "./script/sample.sh"
                 ]
               },
               "environment": {

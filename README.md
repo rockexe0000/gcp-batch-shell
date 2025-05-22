@@ -62,6 +62,22 @@ docker push ${IMAGE_URL}:latest
 
 
 
+## use docker-compose
+```
+cd Livinglife.MongodbBackup.Batch
+
+docker-compose -f docker/app.yml build --no-cache
+
+docker-compose -f docker/app.yml up -d
+
+docker-compose -f docker/app.yml down
+
+docker image prune -f
+```
+
+
+
+
 ### `gcloud batch jobs submit` 使用命令建立作業並執行
 
 ```
